@@ -33,18 +33,9 @@ jobs:
         run: dotnet restore
 
       - name: Build
-        run: dotnet publisj -c Release -r linux-x64 --no-restore
-      
-      - name: Generate ssh key
-        run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
-      
+        run: dotnet publish -c Release --self-contained true -r linux-x64 --no-restore
+
       - name: Deploy to VPS
-        run: rsync -rlptgoD --delete --exclude ".git/" -e "ssh -i .key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -p ${SSH_PORT}" bin/Release/net5.0/wwwroot $SSH_USER@$SSH_HOST:$DEPLOY_PATH"
-        env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
         uses: easingthemes/ssh-deploy@v2.1.5
         with:
           # Private Key
@@ -54,8 +45,8 @@ jobs:
           # Remote user
           REMOTE_USER: ${{ secrets.SSH_USER }}
           # Source directory
-          SOURCE: "bin/Release/net5.0/wwwroot"
+          SOURCE: "bin/Release/net5.0/publish/wwwroot/"
           # Target directory
-          TARGET: "/var/www/uramonk.com/html"
+          TARGET: ${{ secrets.DEPLOY_PATH }}
           # Arguments to pass to rsync
           ARGS: "-rltgoDzvO --delete"
