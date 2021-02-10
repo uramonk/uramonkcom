@@ -1,5 +1,0 @@
-﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/MudBlazor" Path="/Users/uramonk/.nuget/packages/mudblazor/5.0.0/build/../staticwebassets/" />
-  <ContentRoot BasePath="/" Path="/Users/uramonk/dev/uramonkcom/bin/Debug/net5.0/wwwroot/" />
-  <ContentRoot BasePath="/" Path="/Users/uramonk/dev/uramonkcom/obj/Debug/net5.0/scopedcss/bundle/" />
-</StaticWebAssets>
