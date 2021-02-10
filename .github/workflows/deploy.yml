@@ -49,4 +49,4 @@ jobs:
           # Target directory
           TARGET: ${{ secrets.DEPLOY_PATH }}
           # Arguments to pass to rsync
-          ARGS: "-rltgoDzvO --delete"
+          ARGS: "-rltgoDzv --delete"
