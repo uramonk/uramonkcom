@@ -1,17 +1,32 @@
 @inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudThemeProvider Theme="MyCustomTheme" />
+<MudDialogProvider/>
+<MudSnackbarProvider/>
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
+<MudAppBar Fixed="true">
+    <MudText Typo="Typo.h6" Link="/" Class="ml-3">uramonk.com</MudText>
+    <MudAppBarSpacer />
+    <MudButton Link="#top" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">TOP</MudButton>
+    <!-- https://github.com/dotnet/aspnetcore/issues/23522#issuecomment-653336890 -->
+    <MudButton Link="#profile" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">PROFILE</MudButton>
+    <MudButton Link="#skill" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">SKILL</MudButton>
+    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Edge="Edge.End" Style="@Constants.White" Link="https://github.com/uramonk" Target="_blank"/>
+</MudAppBar>
+@Body
 
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
-</div>
+@code {
+    // カスタムテーマ
+    MudTheme MyCustomTheme = new MudTheme() {
+        Palette = new Palette() {
+            Primary = Colors.BlueGrey.Default,
+            Secondary = Colors.BlueGrey.Lighten5,
+            AppbarText = "#FFFFFF",
+            TextPrimary = "#212121",
+            TextSecondary = "#757575",
+            Divider = "#BDBDBD",
+            AppbarBackground = Colors.BlueGrey.Default,
+            Background = Colors.BlueGrey.Lighten5,
+        }
+    };
+}
