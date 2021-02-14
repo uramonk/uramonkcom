@@ -6,13 +6,24 @@
 
 <MudLayout>
     <MudAppBar Fixed="true">
+        <!-- xs時はメニューで表示 -->
+        <MudHidden Breakpoint="Breakpoint.Xs" Invert="true">
+            <MudMenu Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit">
+                <MudMenuItem Link="#top" Target="_top">TOP</MudMenuItem>
+                <MudMenuItem Link="#profile" Target="_top" >PROFILE</MudMenuItem>
+                <MudMenuItem Link="#skill" Target="_top" >SKILL</MudMenuItem>
+            </MudMenu>
+        </MudHidden>
         <MudText Typo="Typo.h6" Link="/" Class="ml-3">uramonk.com</MudText>
         <MudAppBarSpacer />
-        <MudButton Link="#top" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">TOP</MudButton>
-        <!-- https://github.com/dotnet/aspnetcore/issues/23522#issuecomment-653336890 -->
-        <MudButton Link="#profile" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">PROFILE</MudButton>
-        <MudButton Link="#skill" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">SKILL</MudButton>
-        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Edge="Edge.End" Style="@Constants.White" Link="https://github.com/uramonk/uramonkcom" Target="_blank"/>
+        <!-- sm以上時はAppBarに表示 -->
+        <MudHidden Breakpoint="Breakpoint.SmAndUp" Invert="true">
+            <MudButton Link="#top" Target="_top" Variant="Variant.Text" Color="Color.Inherit" DisableRipple="true">TOP</MudButton>
+            <!-- https://github.com/dotnet/aspnetcore/issues/23522#issuecomment-653336890 -->
+            <MudButton Link="#profile" Target="_top" Variant="Variant.Text" Color="Color.Inherit" DisableRipple="true">PROFILE</MudButton>
+            <MudButton Link="#skill" Target="_top" Variant="Variant.Text" Color="Color.Inherit" DisableRipple="true">SKILL</MudButton>
+        </MudHidden>
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Edge="Edge.End" Color="Color.Inherit" Link="https://github.com/uramonk/uramonkcom" Target="_blank"/>
     </MudAppBar>
     <MudMainContent style="padding-top:0">
         @Body
