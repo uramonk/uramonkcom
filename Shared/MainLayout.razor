@@ -4,16 +4,21 @@
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
-<MudAppBar Fixed="true">
-    <MudText Typo="Typo.h6" Link="/" Class="ml-3">uramonk.com</MudText>
-    <MudAppBarSpacer />
-    <MudButton Link="#top" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">TOP</MudButton>
-    <!-- https://github.com/dotnet/aspnetcore/issues/23522#issuecomment-653336890 -->
-    <MudButton Link="#profile" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">PROFILE</MudButton>
-    <MudButton Link="#skill" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">SKILL</MudButton>
-    <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Edge="Edge.End" Style="@Constants.White" Link="https://github.com/uramonk" Target="_blank"/>
-</MudAppBar>
-@Body
+<MudLayout>
+    <MudAppBar Fixed="true">
+        <MudText Typo="Typo.h6" Link="/" Class="ml-3">uramonk.com</MudText>
+        <MudAppBarSpacer />
+        <MudButton Link="#top" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">TOP</MudButton>
+        <!-- https://github.com/dotnet/aspnetcore/issues/23522#issuecomment-653336890 -->
+        <MudButton Link="#profile" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">PROFILE</MudButton>
+        <MudButton Link="#skill" Target="_top" Variant="Variant.Text" Style="@Constants.White" DisableRipple="true">SKILL</MudButton>
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Edge="Edge.End" Style="@Constants.White" Link="https://github.com/uramonk/uramonkcom" Target="_blank"/>
+    </MudAppBar>
+    <MudMainContent style="padding-top:0">
+        @Body
+    </MudMainContent>
+    <MudText Class="mud-theme-primary p-2 mt-6" Align="Align.Center">© 2021 uramonk</MudText>
+</MudLayout>
 
 @code {
     // カスタムテーマ

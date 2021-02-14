@@ -1,0 +1,36 @@
+<div class="profile" id=@Id>
+    <MudContainer Class="pt-8">
+        <MudText Typo="Typo.h3" Align="Align.Center">Profile</MudText>
+        <MudCard Class="mt-8">
+            <MudCardHeader>
+                <CardHeaderAvatar>
+                    <MudAvatar Image="img/my.jpg" Size="Size.Large" />
+                </CardHeaderAvatar>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5">uramonk</MudText>
+                    <MudText Typo="Typo.body2">Chiba in Japan</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudText Typo="Typo.body1">大学院卒業後、総合電機メーカーでWindowsアプリ及びAndroidアプリの開発を経験。</MudText>
+                <MudText Typo="Typo.body1">その後、IT企業でAndroidアプリの開発からスタートし、iOS、フロントエンド、開発及びチームマネジメントなど一通りの業務を経験。</MudText>
+                <MudText Typo="Typo.body1">現在はシステム開発会社でWeb開発や新規Webサービス企画、業務改善などを担当。</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Link="https://github.com/uramonk" Target="_blank"/>
+                <MudIconButton Icon="@Icons.Custom.Brands.Instagram" Link="https://www.instagram.com/uramonk" Target="_blank"/>
+                <MudIconButton Link="https://stackoverflow.com/users/5155869/uramonk" Target="_blank">
+                    <img src="img/stackoverflow.png" class="icon-img"/>
+                </MudIconButton>
+                <MudIconButton Link="https://qiita.com/uramonk" Target="_blank">
+                    <img src="img/qiita.png" class="icon-img"/>
+                </MudIconButton>
+            </MudCardActions>
+        </MudCard>
+    </MudContainer>   
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}
