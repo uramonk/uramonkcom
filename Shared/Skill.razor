@@ -1,0 +1,93 @@
+<div class="skill" id=@Id>
+    <MudContainer Class="pt-8">
+        <MudText Typo="Typo.h3" Align="Align.Center">Skill</MudText>
+        <MudGrid Class="mt-8">
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Java</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: 4年</MudText>
+                        <MudText>業務レベルでAndroidアプリの開発が可能。</MudText>
+                        <MudText>Spring Bootによる開発経験中。</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Kotlin</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: 1年</MudText>
+                        <MudText>業務レベルでAndroidアプリの開発が可能。</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">C#</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: 2年</MudText>
+                        <MudText>プロトタイプの開発が可能。</MudText>
+                        <MudText>.NET Core/Blazor Webassemblyの勉強。</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Android</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: 5年</MudText>
+                        <MudText>業務でアプリの開発及びGoogle Play Consoleを用いたリリース経験。</MudText>
+                        <MudText>MVC/Clean Architecture/RxJava</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">iOS</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: 2年</MudText>
+                        <MudText>App Connectを用いた審査提出及びリリース経験。</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudText Typo="Typo.h6">Management</MudText>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudText>経験年数: ３年</MudText>
+                        <MudText>開発のスケジュールやタスク管理、品質管理等の開発マネジメントや、チームマネジメントを経験。</MudText>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+}

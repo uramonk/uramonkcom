@@ -1,0 +1,11 @@
+.skill {
+    height: 100vh;
+    padding-top: 3rem;
+}
+
+.title {
+    vertical-align: middle;
+    display: table-cell;
+    color: white;
+    padding-left: 200px;
+}
