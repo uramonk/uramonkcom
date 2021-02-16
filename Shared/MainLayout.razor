@@ -9,15 +9,15 @@
         <!-- xs時はメニューで表示 -->
         <MudHidden Breakpoint="Breakpoint.Xs" Invert="true">
             <MudMenu Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit">
-                <MudMenuItem>
-                    <NavLink href="#top" target="_top">TOP</NavLink>
-                </MudMenuItem>
-                <MudMenuItem>
-                    <NavLink href="#profile" target="_top">PROFILE</NavLink>
-                </MudMenuItem>
-                <MudMenuItem>
-                    <NavLink href="#skill" target="_top">SKILL</NavLink>
-                </MudMenuItem>
+                <MudLink Href="#top" Target="_top">
+                    <MudMenuItem>TOP</MudMenuItem>
+                </MudLink>
+                <MudLink Href="#profile" Target="_top">
+                    <MudMenuItem>PROFILE</MudMenuItem>
+                </MudLink>
+                <MudLink Href="#skill" Target="_top">
+                    <MudMenuItem>SKILL</MudMenuItem>
+                </MudLink>
             </MudMenu>
         </MudHidden>
         <MudText Typo="Typo.h6" Class="ml-3">uramonk.com</MudText>
