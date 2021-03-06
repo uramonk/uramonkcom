@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# website:http://ogp.me/ns/website#">
+
+<head prefix="og:http://ogp.me/ns# fb:http://ogp.me/ns/fb# website:http://ogp.me/ns/website#">
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta property="og:url" content="https://uramonk.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="uramonk.com" />
@@ -19,27 +17,48 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="uramonkcom.styles.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="app">読込中...</div>
 
     <div id="blazor-error-ui">
-      An unhandled error has occurred.
-      <a href="" class="reload">Reload</a>
-      <a class="dismiss">Dismiss</a>
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">Dismiss</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>
-      navigator.serviceWorker.register("service-worker.js");
+        navigator.serviceWorker.register("service-worker.js");
     </script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
-  </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCtbH7s1dqcX5Ys300_nIIwbX5fsm48Ed0",
+            authDomain: "uramonkcom.firebaseapp.com",
+            projectId: "uramonkcom",
+            storageBucket: "uramonkcom.appspot.com",
+            messagingSenderId: "761702780674",
+            appId: "1:761702780674:web:a669cf2e30c01f87c93c1b",
+            measurementId: "G-SPW0VQHMJ2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+
 </html>
